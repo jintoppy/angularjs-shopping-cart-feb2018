@@ -12,8 +12,8 @@ angular.module('shoppingcart.product')
                         });
         };
 
-        this.addProduct = function(){
-            
+        this.addProduct = function(newProductInfo){
+            return $http.post(AppConstant.urls.product, newProductInfo);
             
         };
 

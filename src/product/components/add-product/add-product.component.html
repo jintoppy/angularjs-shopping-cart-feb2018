@@ -1,6 +1,7 @@
 <h2>Add Product</h2>
 
-<form name="addProductForm" novalidate>
+<form name="addProductForm" ng-submit="$ctrl.onFormSubmit($event)" novalidate>
+        
     <div>
         <label for="title">Title</label>
         <input ng-model="$ctrl.newProduct.title" required type="text" name="title">
