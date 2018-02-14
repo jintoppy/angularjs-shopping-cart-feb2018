@@ -11,7 +11,16 @@ angular.module('shoppingcart')
         $stateProvider.state({
             name: 'home',
             url: '/',
-            component: 'productList'
+            component: 'productList',
+            resolve: {
+                products: ['ProductService', function(ProductService){
+                    return ProductService
+                            .getProducts()
+                            .then(function(res){
+                                return res.data;
+                            });
+                }]
+            }
         });
 
         $stateProvider.state({
