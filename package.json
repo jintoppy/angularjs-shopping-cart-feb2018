@@ -1,0 +1,24 @@
+{
+  "name": "angularjs-shopping-cart-feb2018",
+  "version": "1.0.0",
+  "description": "",
+  "main": "angular-ui-router.js",
+  "scripts": {
+    "server": "json-server --watch db.json",
+    "start": "http-server"    
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jintoppy/angularjs-shopping-cart-feb2018.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jintoppy/angularjs-shopping-cart-feb2018/issues"
+  },
+  "homepage": "https://github.com/jintoppy/angularjs-shopping-cart-feb2018#readme",
+  "devDependencies": {
+    "json-server": "^0.12.1"
+  }
+}
