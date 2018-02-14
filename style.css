@@ -39,3 +39,10 @@
 input.ng-invalid.ng-dirty{
     border: 1px solid red;
 }
+
+.directive{
+    border: 1px dotted blue;
+    padding: 10px;
+    margin: 10px;
+    background-color: yellow;
+}
