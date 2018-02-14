@@ -1,28 +1,28 @@
 <h2>Add Product</h2>
 
-<form>
+<form name="addProductForm" novalidate>
     <div>
         <label for="title">Title</label>
-        <input type="text" name="title">
+        <input ng-model="$ctrl.newProduct.title" required type="text" name="title">
     </div>
     <div>
-            <label for="company">Title</label>
-            <input type="text" name="company">
+            <label for="company">Company</label>
+            <input type="text" ng-model="$ctrl.newProduct.company" name="company">
     </div>
 
     <div>
             <label for="price">Price</label>
-            <input type="number" name="price">
+            <input type="number" ng-model="$ctrl.newProduct.price" name="price">
     </div>
 
     <div>
             <label for="imgUrl">Image url</label>
-            <input type="text" name="imgUrl">
+            <input type="text" ng-model="$ctrl.newProduct.imgUrl" name="imgUrl">
     </div>
-
+    {{$ctrl.newProduct}}
     <div>
         <input type="submit" value="Add Product">
-        <button type="reset" value="Reset">
+        <input type="reset" value="Reset">
     </div>
 
 </form>
