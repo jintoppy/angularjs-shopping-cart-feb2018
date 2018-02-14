@@ -35,3 +35,7 @@
     margin: 10px;
     border-radius: 5px;
 }
+
+input.ng-invalid.ng-dirty{
+    border: 1px solid red;
+}

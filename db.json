@@ -18,6 +18,17 @@
       "company": "Google",
       "price": 5,
       "id": 4
+    },
+    {
+      "company1": true,
+      "company2": true,
+      "title": "asdf",
+      "price": 5,
+      "imgUrl": "afaf",
+      "id": 5
+    },
+    {
+      "id": 6
     }
   ]
 }

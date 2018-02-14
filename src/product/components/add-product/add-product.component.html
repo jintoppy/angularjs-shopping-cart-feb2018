@@ -1,10 +1,23 @@
 <h2>Add Product</h2>
 
-<form name="addProductForm" ng-submit="$ctrl.onFormSubmit($event)" novalidate>
+<form name="addProductForm" ng-submit="$ctrl.onFormSubmit($event, addProductForm)" novalidate>
         
     <div>
         <label for="title">Title</label>
-        <input ng-model="$ctrl.newProduct.title" required type="text" name="title">
+        <input 
+            ng-model="$ctrl.newProduct.title" 
+            required 
+            minlength="3"
+            type="text" 
+            name="title"
+            >
+            
+        <span ng-if="addProductForm.title.$error.required">
+            This field is required
+        </span>
+        <span ng-if="addProductForm.title.$error.minlength">
+                This field requires minimum 3 characters
+        </span>
     </div>
     <div>
             <label for="company">Company</label>
@@ -15,6 +28,7 @@
             <label for="price">Price</label>
             <input type="number" ng-model="$ctrl.newProduct.price" name="price">
     </div>
+
 
     <div>
             <label for="imgUrl">Image url</label>
