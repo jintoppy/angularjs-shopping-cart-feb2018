@@ -3,9 +3,10 @@
     <h3 ng-bind="prod.title"></h3>
     <img width="100" height="100" ng-src="{{prod.imgUrl}}" alt="">
     <div>
-        <span class="price" ng-bind="prod.price"></span>        
+        <span class="price" ng-bind="prod.price | currency"></span>        
     </div>
     <div>
+            <a ui-sref="showProductInfo({productId: prod.id})">View Details</a>
             <button>Add to Cart</button>
     </div>
 </div>
