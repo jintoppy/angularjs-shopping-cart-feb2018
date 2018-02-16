@@ -4,11 +4,9 @@ angular.module('shoppingcart.product')
 
         this.getProducts = function(){
             return $http
-                        .get(AppConstant.urls.product)
+                        .get(AppConstant.urls.product + 'andomethons')
                         .then(function(res){
                             return res.data;
-                        }, function(){
-                            alert('some error happened');
                         });
         };
 
