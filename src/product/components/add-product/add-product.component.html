@@ -7,11 +7,14 @@
         <input 
             ng-model="$ctrl.newProduct.title" 
             required 
+            prod-title
             minlength="3"
             type="text" 
             name="title"
             >
-            
+        <span ng-if="addProductForm.title.$error.prodTitle">
+            Should not start with
+        </span>
         <span ng-if="addProductForm.title.$error.required">
             This field is required
         </span>
