@@ -1,5 +1,6 @@
 angular.module('shoppingcart.shared')
-    .directive('prodTitle', [function(){
+    .directive('prodTitle', ['$q', 'ProductService',  
+    function($q, ProductService){
         return {
             restrict: 'A',
             require: 'ngModel',
@@ -17,6 +18,20 @@ angular.module('shoppingcart.shared')
                         return false;
                     }
                     return true;
+                };
+
+                ngModelCtrl.$asyncValidators.prodAvailability = function(val){
+                    var defer = $q.defer();
+                    ProductService.searchProduct(val)
+                        .then(function(products){
+                            if(products.length > 0){
+                                defer.reject();
+                            }
+                            defer.resolve();
+                        });
+                    
+                    return defer.promise;
+
                 };
             }
         }

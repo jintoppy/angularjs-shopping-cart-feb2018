@@ -17,6 +17,14 @@ angular.module('shoppingcart.product')
             
         };
 
+        this.searchProduct = function(title) {
+            return $http
+                    .get(AppConstant.urls.product + '?title=' + title)
+                    .then(function(res){
+                        return res.data
+                    });
+        };
+
         this.getProductDetails = function(productId){
             return $http
                         .get(AppConstant.urls.product + '/' + productId)

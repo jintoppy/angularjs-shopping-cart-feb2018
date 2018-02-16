@@ -10,10 +10,14 @@
             prod-title
             minlength="3"
             type="text" 
+            ng-model-options="{ updateOn: 'default blur', debounce: { default: 500, blur: 0 } }"
             name="title"
             >
         <span ng-if="addProductForm.title.$error.prodTitle">
             Should not start with
+        </span>
+        <span ng-if="addProductForm.title.$error.prodAvailability">
+            Already product with same title available
         </span>
         <span ng-if="addProductForm.title.$error.required">
             This field is required
